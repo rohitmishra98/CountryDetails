@@ -1,0 +1,38 @@
+<div class="card">
+    <h2 class="card-title">Home - Country Details</h2>
+    <table class="table table-striped" *ngIf="countryDetails; else nodata">
+        <tbody>
+            <tr>
+                <td>Country Name</td>
+                <td>{{countryDetails.name}}</td>
+            </tr>
+            <tr>
+                <td>Capital</td>
+                <td>{{countryDetails.capital}}</td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>{{countryDetails.region}}</td>
+            </tr>
+            <tr>
+                <td>Sub Region</td>
+                <td>{{countryDetails.subregion}}</td>
+            </tr>
+            <tr>
+                <td>Population</td>
+                <td>{{countryDetails.population}}</td>
+            </tr>
+            <tr>
+                <td>Area</td>
+                <td>{{countryDetails.area}}</td>
+            </tr>
+            <tr>
+                <td>Alpha3Code</td>
+                <td>{{countryDetails.alpha3Code}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template  #nodata>  
+        <h4 class="text-warning">Please select a country</h4>
+    </ng-template>
+</div>

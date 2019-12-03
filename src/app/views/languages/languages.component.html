@@ -1,0 +1,22 @@
+<div class="card">
+    <h2 class="card-title">Language List</h2>
+    <table class="table table-striped" *ngIf="languageList; else nodata">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Native name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lang of languageList;let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{lang.name}}</td>
+                <td>{{lang.nativeName}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template  #nodata>  
+        <h4 class="text-warning">Please select a country</h4>
+    </ng-template>
+</div>

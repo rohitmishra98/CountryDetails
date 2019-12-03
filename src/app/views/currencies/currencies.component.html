@@ -1,0 +1,24 @@
+<div class="card">
+    <h2 class="card-title">Currency List</h2>
+    <table class="table table-striped" *ngIf="currencyList; else nodata">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let currency of currencyList;let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{currency.name}}</td>
+                <td>{{currency.code}}</td>
+                <td>{{currency.symbol}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template  #nodata>
+       <h4 class="text-warning">Please select a country</h4>
+    </ng-template>
+</div>

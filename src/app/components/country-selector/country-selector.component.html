@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="form-group w-25">
+        <label for="country-select">Select country:</label>
+        <select class="form-control" placeholder="Select Country" id="country-select" (change)="updateSelected(selectedCountry)" 
+            [(ngModel)]="selectedCountry">
+            <option value="">Select country</option>
+            <option [value]="clist.alpha3Code" *ngFor="let clist of countryList">{{clist.name}}</option>
+        </select>
+    </div>
+</div>
